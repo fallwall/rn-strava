@@ -7,6 +7,15 @@ npm init -y
 npm i bcrypt express jsonwebtoken mongoose nodemon
 ```
 
+### Start Server
+```
+npm run dev
+```
+aka
+```
+node src/index.js
+```
+
 ### Visual Concept
 
 ![data](https://i.imgur.com/VeeG0dq.png)
