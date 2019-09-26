@@ -27,3 +27,16 @@ node src/index.js
 
 ![screens](https://i.imgur.com/ZvigzbC.png)
 ![screens](https://i.imgur.com/qpaaylE.png)
+
+Nav fix:
+
+```
+npm install react-navigation
+npx expo-cli install react-native-gesture-handler react-native-reanimated react-navigation-stack react-navigation-tabs
+```
+
+```
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+```
