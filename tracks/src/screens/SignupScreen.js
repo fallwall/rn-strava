@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
-import PropTypes from 'prop-types';
 
 const SignupScreen = ({ navigation }) => {
   return (
@@ -18,10 +17,6 @@ const SignupScreen = ({ navigation }) => {
       />
       </>
   )
-};
-
-SignupScreen.propTypes = {
-  navigation: PropTypes.object.isRequired,
 };
 
 const styles = StyleSheet.create({});
