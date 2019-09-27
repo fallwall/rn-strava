@@ -53,3 +53,7 @@ react-native-async-storage
 AsyncStorage.setItem(key, value)
 AsyncStorage.getItem(key)
 AsyncStorage.removeItem(key)
+
+### navRef.js
+function to export to access navigator
+(the nav in app.js is hard to get access to)
