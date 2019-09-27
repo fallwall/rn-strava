@@ -57,3 +57,14 @@ AsyncStorage.removeItem(key)
 ### navRef.js
 function to export to access navigator
 (the nav in app.js is hard to get access to)
+
+### Navigation Events
+```
+import { NavigationEvents } from 'react-navigation';
+```
+```
+<NavigationEvents
+  onWillBlur={clearErrorMessage}
+/>
+```
+onWillBlur/onWillFocus/onDidBlur/onDidFocus
