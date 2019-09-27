@@ -46,3 +46,10 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 npm i react-native-elements
 ```
 docs: https://react-native-training.github.io/react-native-elements/
+
+### AsyncStorage
+react-native-async-storage
+!(asyncstorage)[https://i.imgur.com/PYkiChB.png]
+AsyncStorage.setItem(key, value)
+AsyncStorage.getItem(key)
+AsyncStorage.removeItem(key)
