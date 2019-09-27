@@ -3,6 +3,8 @@ import trackerApi from '../services/trackerApi';
 
 const authReducer = (state, action) => {
   switch (action.type) {
+    case 'add_error':
+      return { ...state, errorMessage: action.payload };
     default:
       return state;
   }
@@ -14,7 +16,7 @@ const signup = (dispatch) => {
       const resp = await trackerApi.post('/signup', { email, password });
       console.log(resp.data);
     } catch (err) {
-      console.log(err.response.data);
+      dispatch({ type: 'add_error', payload: 'Something is not right.' })
     }
   };
 };
@@ -36,5 +38,6 @@ export const { Provider, Context } = createDataContext(
   { signup, signin, signout },
   {
     isSignedIn: false,
+    errorMessage: '',
   },
 );

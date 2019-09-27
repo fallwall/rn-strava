@@ -34,9 +34,10 @@ const SignupScreen = ({ navigation }) => {
       </Spacer>
       <Spacer />
       <Spacer>
+        {state.errorMessage ? <Text style={styles.error}>{state.errorMessage}</Text> : null}
         <Button
           title="Sign Up"
-          onPress={() => signup({email, password})}
+          onPress={() => signup({ email, password })}
         />
       </Spacer>
     </View>
@@ -54,6 +55,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     marginBottom: 150,
+  },
+  error: {
+    color: 'red',
+    fontSize: 16,
+    marginLeft: 15,
+    marginTop: 15,
   },
 });
 
