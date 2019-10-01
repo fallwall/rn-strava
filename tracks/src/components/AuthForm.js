@@ -18,8 +18,7 @@ const AuthForm = ({ headerText, errorMessage, onSubmit, submitButtonText }) => {
           value={email}
           onChangeText={setEmail}
           autoCapitalize="none"
-          autoCorrect={false}
-        />
+          autoCorrect={false} />
       </Spacer>
       <Spacer>
         <Input
@@ -28,17 +27,13 @@ const AuthForm = ({ headerText, errorMessage, onSubmit, submitButtonText }) => {
           value={password}
           onChangeText={setPassword}
           autoCapitalize="none"
-          autoCorrect={false}
-        />
+          autoCorrect={false} />
       </Spacer>
       <Spacer />
       <Spacer>
         {errorMessage ? <Text style={styles.error}>{errorMessage}</Text> : null}
       </Spacer>
-      <Button
-          title={submitButtonText}
-          onPress={onSubmit}
-        />
+      <Button title={submitButtonText} onPress={() => { onSubmit({ email, password }) }} />
      
     </>
   )

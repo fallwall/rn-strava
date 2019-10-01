@@ -9,7 +9,8 @@ const AccountScreen = () => {
   const { signout } = useContext(AuthContext);
 
   return (
-    <SafeAreaView forceInset={{top: 'always'}>
+    <>
+      <SafeAreaView forceInset={{ top: 'always' }}>
       <Text style={{ fontSize: 50 }}>
         Account Screen
     </Text>
@@ -20,9 +21,10 @@ const AccountScreen = () => {
         />
       </Spacer>
     </SafeAreaView>
-  );
-};
-
+      </>
+    );
+  };
+  
 const styles = StyleSheet.create({});
 
 export default AccountScreen;
