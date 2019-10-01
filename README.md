@@ -71,7 +71,7 @@ onWillBlur/onWillFocus/onDidBlur/onDidFocus
 
 ### Safe Area View
 ```
-import { SafeAreaView } from "react-navigation";
+import { SafeAreaView } from 'react-navigation';
 ```
 ```
 <SafeAreaView forceInset={{top: 'always'}>
@@ -79,3 +79,8 @@ import { SafeAreaView } from "react-navigation";
 </SafeAreaView>
 ```
 
+### React Native Maps
+npx expo-cli install react-native-maps
+```
+import MapView from 'react-native-maps';
+```
