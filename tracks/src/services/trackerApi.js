@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'http://fa767c08.ngrok.io';
+const baseURL = 'http://localhost:3000';
 
 export default axios.create({
   baseURL,

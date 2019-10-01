@@ -32,22 +32,24 @@ const tryLocalSignin = dispatch => async () => {
   }
 };
 
-const signup = (dispatch) => async ({ email, password }) => {
+const signup = dispatch => async ({ email, password }) => {
   try {
     const resp = await trackerApi.post('/signup', { email, password });
+
     await AsyncStorage.setItem('token', resp.data.token);
     dispatch({ type: 'signin', payload: resp.data.token });
     navigate('TrackList');
   } catch (err) {
+    console.log(email);
     dispatch({
       type: 'add_error',
       payload: 'Something is not right with sign up.'
-    })
+    });
   }
 };
 
 
-const signin = (dispatch) => async ({ email, password }) => {
+const signin = dispatch => async ({ email, password }) => {
   try {
     const resp = await trackerApi.post('/signin', { email, password });
     await AsyncStorage.setItem('token', resp.data.token);
@@ -63,7 +65,7 @@ const signin = (dispatch) => async ({ email, password }) => {
 
 const signout = (dispatch) => async () => {
   await AsyncStorage.removeItem('token');
-  dispatch({ type: 'signpit' });
+  dispatch({ type: 'signout' });
   navigate('loginFlow');
 };
 
