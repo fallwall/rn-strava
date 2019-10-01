@@ -68,3 +68,14 @@ import { NavigationEvents } from 'react-navigation';
 />
 ```
 onWillBlur/onWillFocus/onDidBlur/onDidFocus
+
+### Safe Area View
+```
+import { SafeAreaView } from "react-navigation";
+```
+```
+<SafeAreaView forceInset={{top: 'always'}>
+...
+</SafeAreaView>
+```
+

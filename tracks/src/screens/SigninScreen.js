@@ -9,7 +9,7 @@ const SigninScreen = () => {
   const {
     state,
     signin,
-    clearErrorMessage
+    clearErrorMessage,
   } = useContext(AuthContext);
 
   return (
