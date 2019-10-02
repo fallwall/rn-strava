@@ -84,3 +84,17 @@ npx expo-cli install react-native-maps
 ```
 import MapView from 'react-native-maps';
 ```
+
+### Expo-Location (buggy)
+https://docs.expo.io/versions/latest/sdk/location/
+* 2 forms of tracking: foreground(easy to setup) and background(use more battery, bit more complicated).
+```
+npx expo-cli install expo-location
+```
+Location Permission:
+![locationpermission](https://i.imgur.com/ypjyzkj.png)
+```
+import { requestPermissionsAsync } from 'expo-loaction';
+```
+(currently bug with iOS with deny, no error message)
+
