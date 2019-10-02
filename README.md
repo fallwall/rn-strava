@@ -97,4 +97,33 @@ Location Permission:
 import { requestPermissionsAsync } from 'expo-loaction';
 ```
 (currently bug with iOS with deny, no error message)
+Reading location:
+```
+import { requestPermissionsAsync, watchPositionAsync, Accuracy } from 'expo-location';
 
+...
+
+  const [err, setErr] = useState(null);
+
+  const startWatching = async () => {
+    try {
+      await requestPermissionsAsync();
+      await watchPositionAsync({
+        accuracy: Accuracy.BestForNavigation,
+        timeInterval: 1000,
+        distanceInterval: 10,
+      }, (location) => {
+        // callback here.
+        console.log(location);
+      });
+    } catch (e) {
+      setErr(e);
+    }
+  };
+
+  useEffect(() => {
+    startWatching();
+  }, []);
+
+  ![locationprovider1](https://i.imgur.com/yxRHgCg.png)
+  ![locationprovider2](https://i.imgur.com/gZnyNTi.png)
