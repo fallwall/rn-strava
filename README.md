@@ -136,3 +136,7 @@ import { requestPermissionsAsync, watchPositionAsync, Accuracy } from 'expo-loca
 
   ![locationprovider1](https://i.imgur.com/yxRHgCg.png)
   ![locationprovider2](https://i.imgur.com/gZnyNTi.png)
+
+### To Avoid Stale References
+* use Effect -> refe state/props/context, must add to dependency array ", [here]".
+* don't define outside helper function that ref props/state/context into useEffect. cleaner to define inside useEffect.
