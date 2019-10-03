@@ -4,11 +4,15 @@ import { Context as TrackContext } from '../context/TrackContext';
 
 export default () => {
   const { createTrack } = useContext(TrackContext);
-  const { state: { name, locations } } = useContext(LocationContext);
+  const {
+    state: { name, locations },
+    reset,
+  } = useContext(LocationContext);
 
-  const saveTrack = () => {
-    createTrack(name, locations);
+  const saveTrack = async () => {
+    await createTrack(name, locations);
+    reset();
   };
 
-  return [saveTrack];
+  return saveTrack;
 };
