@@ -133,6 +133,7 @@ import { requestPermissionsAsync, watchPositionAsync, Accuracy } from 'expo-loca
   useEffect(() => {
     startWatching();
   }, []);
+```
 
   ![locationprovider1](https://i.imgur.com/yxRHgCg.png)
   ![locationprovider2](https://i.imgur.com/gZnyNTi.png)
