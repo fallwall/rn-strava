@@ -6,7 +6,6 @@ import {
 } from 'expo-location';
 
 export default (shouldTrack, callback) => {
-
   const [err, setErr] = useState(null);
   const [subscriber, setSubscriber] = useState(null);
 
@@ -32,7 +31,13 @@ export default (shouldTrack, callback) => {
       subscriber.remove();
       setSubscriber(null);
     }
-  }, [shouldTrack]);
+
+    return () => {
+      if (subscriber) {
+        subscriber.remove();
+      }
+    };
+  }, [shouldTrack, callback]);
 
   return [err];
 };
