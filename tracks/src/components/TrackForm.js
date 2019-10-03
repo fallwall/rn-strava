@@ -20,17 +20,28 @@ const TrackForm = () => {
           placeholder="name of the track"
         />
       </Spacer>
-      {recording
-        ? <Button
-        onPress={stopRecording}
-        title="Stop"
-      />
-        :
-        <Button
-          onPress={startRecording}
-          title="Record"
-        />
-      }
+      <Spacer>
+        {recording
+          ? <Button
+            onPress={stopRecording}
+            title="Stop"
+          />
+          :
+          <Button
+            onPress={startRecording}
+            title="Record"
+          />
+        }
+      </Spacer>
+      <Spacer>
+        {
+          !recording && locations.length
+            ? (<Button
+              title="Save"
+            />)
+            : null
+        }
+      </Spacer>
     </>
   )
 }
