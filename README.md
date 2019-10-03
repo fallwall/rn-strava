@@ -69,6 +69,15 @@ import { NavigationEvents } from 'react-navigation';
 ```
 onWillBlur/onWillFocus/onDidBlur/onDidFocus
 
+Alternatively: 
+```
+import { withNavigationFocus } from 'react-navigation';
+```
+const Component = ({isFocused}) => {
+  ...
+}
+...
+
 ### Safe Area View
 ```
 import { SafeAreaView } from 'react-navigation';
