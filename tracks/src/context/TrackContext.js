@@ -1,4 +1,5 @@
 import createDataContext from './createDataContext';
+import trackerApi from '../services/trackerApi';
 
 const trackReducer = (state, action) => {
   switch (action.type) {
