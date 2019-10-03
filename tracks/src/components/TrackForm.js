@@ -6,7 +6,7 @@ const TrackForm = () => {
   return (
     <>
       <Spacer>
-        <Input />
+        <Input placeholder="name of the track" />
       </Spacer>
 
       <Button title="Start Recording" />
